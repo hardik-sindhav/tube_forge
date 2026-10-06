@@ -16,6 +16,7 @@ import {
 import { useEffect } from "react";
 import type { VideoIdea } from "@/lib/types";
 import { videoToMarkdown } from "@/lib/export";
+import { ThumbnailToolsCard } from "./Promo";
 import { CopyButton, FeedbackBar, type FeedbackValue, Pill, ScoreRing } from "./ui";
 
 function Block({
@@ -208,6 +209,8 @@ export function VideoDrawer({
               </p>
             )}
           </Block>
+
+          <ThumbnailToolsCard />
 
           {video.outline.length > 0 && (
             <Block icon={<ListOrdered className="size-3.5" />} title="Video outline" copy={video.outline.map((s, i) => `${i + 1}. ${s}`).join("\n")}>

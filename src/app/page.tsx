@@ -4,6 +4,7 @@ import { AlertTriangle, RotateCcw, Sparkles } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChannelForm } from "@/components/ChannelForm";
 import { MemoryPanel } from "@/components/MemoryPanel";
+import { PromoBar, PromoFooter } from "@/components/Promo";
 import { Results } from "@/components/Results";
 import { EmptyState, LoadingState } from "@/components/States";
 import { TrendsPanel } from "@/components/TrendsPanel";
@@ -181,6 +182,8 @@ export default function Home() {
         <div className="bg-grid pointer-events-none fixed inset-x-0 top-0 h-[520px]" />
         <div className="glow pointer-events-none fixed inset-x-0 top-0 h-[520px]" />
 
+        <PromoBar />
+
         {/* Nav */}
         <header className="sticky top-0 z-40 border-b border-line/70 bg-bg/70 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-[1500px] items-center justify-between px-4 sm:px-6">
@@ -292,6 +295,8 @@ export default function Home() {
             </section>
           </div>
         </main>
+
+        <PromoFooter />
       </div>
     </ToastProvider>
   );
